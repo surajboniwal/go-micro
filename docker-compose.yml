@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend/
+    image: go-micro-frontend
+    ports:
+      - "80:80"
+  broker-service:
+    build: ./broker-service/
+    image: go-micro-broker-service
+    ports:
+      - "81:80"
